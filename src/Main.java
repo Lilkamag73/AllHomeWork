@@ -11,7 +11,7 @@ public class Main {
         task4(scanner);
         task5(scanner);
         task6(scanner);
-        task7();
+        task7(scanner);
         scanner.close();
     }
 
@@ -96,19 +96,26 @@ public class Main {
         if (people < 60) {
             System.out.println("В вагоне " + people + " человек, то можно спокойно сесть");
         } else {
-            if (people > 60 && people < 102){
+            if (people >= 60 && people <= 102){
                 System.out.println("В вагоне "+ people + " человек, то остались только стоячие места");
                 }
-            { if (people > 102)
+            { if (people >= 102)
                     System.out.println("В вагоне " + people + " человек, то вагон заполнен");
             }
         }
     }
 
-    public static void task7(){
+    public static void task7(Scanner scanner){
+        System.out.println("Введите первое число:");
         int one;
+        one = scanner.nextInt();
+        System.out.println("Введите первое число:");
         int two;
+        two = scanner.nextInt();
+        System.out.println("Введите первое число:");
         int three;
+        three = scanner.nextInt();
+
 
         boolean oneMax = (one > two || one > three);
         boolean twoMax = (two > one || two > three);
