@@ -94,34 +94,26 @@ public class Main {
         int people;
         people = scanner.nextInt();
         if (people < 60) {
-            System.out.println("В вагоне " + people + " человек, то можно спокойно сесть");
+            System.out.println("В вагоне " + people + " человек, можно спокойно сесть");
+        } else if (people < 102) {
+            System.out.println("В вагоне " + people + " человек, остались только стоячие места");
         } else {
-            if (people > 60 && people < 102){
-                System.out.println("В вагоне "+ people + " человек, то остались только стоячие места");
-                }
-            { if (people > 102)
-                    System.out.println("В вагоне " + people + " человек, то вагон заполнен");
-            }
+            System.out.println("В вагоне " + people + " человек, вагон заполнен");
         }
+
     }
 
-    public static void task7(){
+    public static void task7() {
         int one;
         int two;
         int three;
 
-        boolean oneMax = (one > two || one > three);
-        boolean twoMax = (two > one || two > three);
-        boolean threeMax = (three > one || three > two);
-
-        if (oneMax){
-            System.out.println("Самое большое число One");
-        }
-        if (twoMax){
-            System.out.println("Самое большое число Two");
-        }
-        if (threeMax){
-            System.out.println("Самое большое число Three");
+        if (one >= two && one >= three) {
+            System.out.println("Самое большое число One = " + one);
+        } else if (two >= one && two >= three) {
+            System.out.println("Самое большое число Two = " + two);
+        } else {
+            System.out.println("Самое большое число Three = " + three);
         }
     }
 }
